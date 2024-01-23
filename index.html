@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Encriptador de Texto</title>
+  </head>
+  <body>
+    <div id="logo-alura">
+      <img src="./assets/logo-alura.svg" alt="">
+    </div>
+    <section id="section-left">
+      <form id="meuFormulario">
+        <input
+          type="text"
+          id="textoInput"
+          name="textoInput"
+          placeholder="Digite seu texto"
+          required
+        />
+
+        
+        <div id="section-buttons">
+          <img  src="./assets/alert-small.svg" alt="">
+          <p id="alert-text">Apenas letras minúsculas e sem acento.</p>
+          <button id="button-criptografar" type="button" onclick="criptografarTexto()">
+            Criptografar
+          </button>
+          <button id="button-descriptografar" type="button" onclick="descriptografarTexto()">
+            Descriptografar
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section id="section-right">
+
+
+        <!-- <img src="./assets/garoto-com-lupa.svg" alt="garoto-com-lupa" />
+        <h3 id="message-not-found">Nenhuma mensagem encontrada</h3>
+        <p id="message-description">
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p> -->
+
+
+   
+        <textarea id="resultadoTexto" rows="5" cols="33">...</textarea>
+        <button id="copy" onclick="copiar()">Copiar</button>
+   
+      
+    </section>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
