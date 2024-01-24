@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <title>Encriptador de Texto</title>
   </head>
   <body>
     <div id="logo-alura">
-      <img src="./assets/logo-alura.svg" alt="">
+      <img src="./assets/logo-alura.svg" alt="" />
     </div>
     <section id="section-left">
-      <form id="meuFormulario">
+      <form id="myForm">
         <input
           type="text"
           id="textoInput"
@@ -21,14 +21,23 @@
           required
         />
 
-        
         <div id="section-buttons">
-          <img  src="./assets/alert-small.svg" alt="">
-          <p id="alert-text">Apenas letras minúsculas e sem acento.</p>
-          <button id="button-criptografar" type="button" onclick="criptografarTexto()">
+          <div id="section-alerts">
+            <img src="./assets/alert-small.svg" alt="alerta" />
+            <p id="alert-text">Apenas letras minúsculas e sem acento.</p>
+          </div>
+          <button
+            id="button-criptografar"
+            type="button"
+            onclick="criptografarTexto()"
+          >
             Criptografar
           </button>
-          <button id="button-descriptografar" type="button" onclick="descriptografarTexto()">
+          <button
+            id="button-descriptografar"
+            type="button"
+            onclick="descriptografarTexto()"
+          >
             Descriptografar
           </button>
         </div>
@@ -36,20 +45,18 @@
     </section>
 
     <section id="section-right">
-
-
-        <!-- <img src="./assets/garoto-com-lupa.svg" alt="garoto-com-lupa" />
+      <div id="section-sem-resultado">
+        <img src="./assets/boy-with-glass.svg" alt="garoto-com-lupa" />
         <h3 id="message-not-found">Nenhuma mensagem encontrada</h3>
         <p id="message-description">
           Digite um texto que você deseja criptografar ou descriptografar.
-        </p> -->
+        </p>
+      </div>
 
-
-   
+      <div id="section-resultado">
         <textarea id="resultadoTexto" rows="5" cols="33">...</textarea>
         <button id="copy" onclick="copiar()">Copiar</button>
-   
-      
+      </div>
     </section>
     <script src="./scripts/main.js"></script>
   </body>
