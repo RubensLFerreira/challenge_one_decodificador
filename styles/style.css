@@ -26,11 +26,12 @@ body {
 }
 
 #section-left {
-  width: 60%;
+  width: 70%;
   height: 100vh;
   margin: 0 5rem;
   font-family: var(--font-primaria);
 }
+
 
 #textoInput {
   width: 90%;
@@ -45,7 +46,6 @@ body {
 }
 
 #alert-text {
-  text-align: left;
   font-size: 0.75rem;
   margin: auto 0.5rem;
 
@@ -53,7 +53,11 @@ body {
 
 #section-buttons {
   position: absolute;
-  bottom: 1rem
+  bottom: 2.8rem
+}
+
+#section-alerts {
+  display: flex;
 }
 
 #button-criptografar {
@@ -84,7 +88,7 @@ body {
 }
 
 #section-right {
-  width: 40%;
+  width: 30%;
   height: 80vh;
   background-color: white;
   margin: 2rem 3rem;
@@ -93,6 +97,26 @@ body {
   font-family: var(--font-primaria);
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #section-left {
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+    text-align: center;
+  }
+
+  #section-right {
+    width: 90%;
+    height: 100%;
+    margin: 17rem 0 0 0;
+    display: flex;
+  }
 }
 
 #logo-alura {
@@ -110,6 +134,19 @@ body {
 #message-description {
   text-align: center;
   font-size: 1.125rem;
+}
+
+#section-sem-resultado {
+  text-align: center;
+  width: 100%;
+}
+
+#section-sem-resultado {
+  display: inline-block;
+}
+
+#section-resultado {
+  display: none;
 }
 
 #resultadoTexto {
@@ -130,11 +167,11 @@ body {
   height: 4.188rem;
   background-color: var(--cor-terciaria);
   color: var(--cor-primaria);
-  border: none;
   border-radius: 24px;
   font-size: 1.125rem;
   font-weight: 400;
-  margin: 1rem auto;
+  margin: 0 auto;
   cursor: pointer;
   border: 1px solid var(--cor-primaria);
+  display: block;
 }
