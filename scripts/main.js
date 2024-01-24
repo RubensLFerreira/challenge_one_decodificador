@@ -1,6 +1,6 @@
 function criptografarTexto() {
   const textoDeEntrada = document.getElementById("textoInput").value;
-
+  
   const textoMinusculo = textoDeEntrada.toLowerCase();
 
   let textoSemSinais;
@@ -28,6 +28,9 @@ function criptografarTexto() {
   }
 
   textoCriptografado = textoCriptografado.join("");
+
+  document.getElementById("section-sem-resultado").style.display = "none";
+  document.getElementById("section-resultado").style.display = "inline";
 
   document.getElementById("resultadoTexto").textContent = textoCriptografado;
 }
@@ -62,10 +65,16 @@ function descriptografarTexto() {
   }
   const textoDescriptografada = novoTexto.join("");
   document.getElementById("resultadoTexto").textContent = textoDescriptografada;
+
+  document.getElementById("section-sem-resultado").style.display = "none";
+  document.getElementById("section-resultado").style.display = "inline";
 }
 
 function copiar() {
   const copiarTexto = document.querySelector("#resultadoTexto");
   copiarTexto.select();
   document.execCommand("copy");
+
+  document.getElementById("section-sem-resultado").style.display = "inline";
+  document.getElementById("section-resultado").style.display = "none";
 }
